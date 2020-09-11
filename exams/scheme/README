@@ -1,0 +1,17 @@
+Edit these files to write your function bodies:
+problem1.scm
+problem2.scm
+problem3.scm
+problem4.scm
+problem5.scm
+problem6.scm
+Do not modify the function signatures or file names.
+
+You can enter these commands in Scheme to test your functions:
+(load "run1.scm")
+(load "run2.scm")
+(load "run3.scm")
+(load "run4.scm")
+(load "run5.scm")
+(load "run6.scm")
+Also you can add more test cases to these files.
