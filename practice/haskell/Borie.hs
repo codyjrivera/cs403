@@ -115,10 +115,11 @@ delete a (Node k l r)
   | a < k = Node k (delete a l) r
   | otherwise = Node k l (delete a r)
   where
-    help Nil Nil = Nil
-    help l Nil = l
-    help Nil r = r
-    help l r = Node m (delete m l) r
+    help l r = case (l, r) of
+      (Nil, Nil) -> Nil
+      (l, Nil) -> l
+      (Nil, r) -> r
+      (l, r) -> Node m (delete m l) r
       where
         m = bstMax l
 
