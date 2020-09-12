@@ -17,9 +17,8 @@ convert _ = [] -- Fallthrough case - length of shortest list
 -- | #2. Invert
 invert :: [(a, a, a)] -> ([a], [a], [a])
 invert [] = ([], [], [])
-invert (p : ps) = (x : xs, y : ys, z : zs)
+invert ((x, y, z) : ps) = (x : xs, y : ys, z : zs)
   where
-    (x, y, z) = p
     (xs, ys, zs) = invert ps
 
 -- | #3. Infinite list find
