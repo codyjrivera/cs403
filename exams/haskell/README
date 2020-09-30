@@ -1,0 +1,20 @@
+Edit these files to write your function bodies:
+problem1.hs
+problem2.hs
+problem3.hs
+problem4.hs
+problem5.hs
+problem6.hs
+problem7.hs
+Do not modify the function signatures or file names or any data definitions.
+However, you may modify the given parameters of a function to use pattern matching.
+
+You can enter these commands to test your functions using the provided test cases:
+ghci < run1.hs
+ghci < run2.hs
+ghci < run3.hs
+ghci < run4.hs
+ghci < run5.hs
+ghci < run6.hs
+ghci < run7.hs
+Also you can add more test cases to these files.
