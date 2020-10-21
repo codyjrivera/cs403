@@ -1,0 +1,31 @@
+Edit these files to write facts and rules that define the given predicates:
+problem1.pl
+problem2.pl
+problem3.pl
+problem4.pl
+problem5.pl
+problem6.pl
+problem7.pl
+Do not modify the predicate signatures or file names.
+However, you may modify the given parameters to use pattern matching.
+
+You can enter these commands to test your predicates using the provided test cases:
+gprolog < run1.pl
+gprolog < run2.pl
+gprolog < run3.pl
+gprolog < run4.pl
+gprolog < run5.pl
+gprolog < run6.pl
+gprolog < run7.pl
+Also you can add more test cases to these files.
+
+These test files use Prolog's predefined predicate setof.
+Both findall(V,Q,L) and setof(V,Q,L) yield a list L that contains all the possible values of
+variable V in answers to query Q.
+The difference is that setof removes any duplicates from L, and also rearranges L into sorted order.
+This way the grading script can award credit for correct solutions even if your predicate returns
+each answer multiple times or in an unexpected order.
+
+Example:
+setof(X, member(X,[c,b,a,d,b,f,d,f,e]), Answers) yields Answers = [a,b,c,d,e,f].
+
