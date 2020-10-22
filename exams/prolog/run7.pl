@@ -5,3 +5,7 @@ setof(X, dreverse([a,b,c,d|T]-T, X-Y), Answers).		% Answers = [[d,c,b,a|Y]]
 setof(X, dreverse(A-A, X-Y), Answers).
 setof(X, drotateleft([a,b,c,d,e,f|T]-T, 2, X-Y), Answers).	% Answers = [[c,d,e,f,a,b|Y]]
 setof(X, drotateright([a,b,c,d,e,f|T]-T, 2, X-Y), Answers).	% Answers = [[e,f,a,b,c,d|Y]]
+setof(X, drotateright([a,b,c,d,e,f|T]-T, 0, X-Y), Answers).	% Answers = [[e,f,a,b,c,d|Y]]
+setof(X, drotateright(T-T, 1, X-Y), Answers).	% Answers = [[e,f,a,b,c,d|Y]]
+setof(X, drotateleft(T-T, 3, X-Y), Answers).	% Answers = [[e,f,a,b,c,d|Y]]
+
