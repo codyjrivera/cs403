@@ -1,0 +1,8 @@
+directed graph, 2 vertices, 0 edges, ((false false ) (false false ) )
+directed graph, 2 vertices, 1 edges, ((false true ) (false false ) )
+undirected graph, 2 vertices, 1 edges, ((false true ) (true false ) )
+directed graph, 2 vertices, 2 edges, ((false true ) (true false ) )
+directed graph, 2 vertices, 1 edges, ((false false ) (true false ) )
+undirected graph, 2 vertices, 1 edges, ((false true ) (true false ) )
+undirected graph, 2 vertices, 0 edges, ((false false ) (false false ) )
+undirected graph, 2 vertices, 1 edges, ((false true ) (true false ) )

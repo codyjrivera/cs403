@@ -1,0 +1,27 @@
+Edit these files to write the body of each method:
+problem1.st
+problem2.st
+problem3.st
+problem4.st
+problem5.st
+Do not modify the file names or class names or method signatures.
+
+You can enter these commands to test your methods using the provided test cases:
+gst -f run1.st
+gst -f run2.st
+gst -f run3.st
+gst -f run4.st
+gst -f run5.st
+You are encouraged to create additional test cases for each problem.
+
+Expected outputs for the provided test cases are given in these files:
+out1.txt
+out2.txt
+out3.txt
+out4.txt
+out5.txt
+
+You can compare your outputs to the expected outputs as follows:
+gst -f run1.st > temp1.txt
+diff temp1.txt out1.txt
+The diff command will show you any differences between the two files.

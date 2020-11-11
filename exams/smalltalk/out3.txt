@@ -1,0 +1,6 @@
+OrderedCollection (6 8 10 12 )
+OrderedCollection (5 12 21 32 )
+OrderedCollection (15 18 21 24 )
+OrderedCollection (45 120 231 384 )
+OrderedCollection (28 32 36 40 )
+OrderedCollection (585 1680 3465 6144 )
