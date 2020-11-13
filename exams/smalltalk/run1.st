@@ -11,3 +11,9 @@ b complement display.
 (a intersect: b) display.
 (a difference: b) display.
 (b difference: a) display.
+
+c := BitSet new init.
+1 to: 10 do: [ :k | c insert: k ].
+(c union: a) display.
+(c intersect: a) display.
+(c difference: a) display.

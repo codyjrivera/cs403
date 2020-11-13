@@ -13,3 +13,6 @@ Transcript display: (w zip: [:a :b :c | a*b*c] with: x with: y); cr.
 
 Transcript display: (w zip: [:a :b | a+b] withAll: {x . y . z}); cr.
 Transcript display: (w zip: [:a :b | a*b] withAll: {x . y . z}); cr.
+
+Transcript display: (w zip: [:a :b | a+b] withAll: #()); cr.
+Transcript display: (w zip: [:a :b | a*b] withAll: #()); cr.

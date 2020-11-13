@@ -34,12 +34,18 @@ Graph extend [
 		| count |
 		count := 0.
 		1 to: (matrix size) do: [ :i |
-			1 to: (matrix size) do: [ :j |
+			1 to: i do: [ :j |
 				((matrix at: i) at: j) ifTrue: [ count := count + 1 ]
 			]
 		].
 		
-		self isDirected ifFalse: [ count := count quo: 2 ].
+		self isDirected ifTrue: [ 
+			1 to: (matrix size) do: [ :i |
+				i + 1 to: (matrix size) do: [ :j |
+					((matrix at: i) at: j) ifTrue: [ count := count + 1 ]
+				]
+			].
+		].
 		^ count
 	]
 ]
