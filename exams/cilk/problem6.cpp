@@ -31,27 +31,17 @@ T reduce(T* array, int n, T (*op)(T, T), T id) {
     return val;
 }
 
-int minPathFromDaDb(int*** D, int n, int i, int j, int a, int b) {
-    int* sums = new int[n];
-    cilk_for (int k = 0; k < n; ++k) {
-        sums[k] = D[a][i][k + 1] + D[b][k + 1][j];
-    }
-    int mv = reduce(sums, n, min, INT_MAX);
-    delete[] sums;
-    return mv;
-}
-
 void APSP (int ***D, int n) {
 	for (int m = 2; m <= n; ++m) {
         cilk_for (int i = 1; i <= n; ++i) {
             cilk_for (int j = 1; j <= n; ++j) {
-                int* mins = new int[m - 1];
-                cilk_for (int k = 0; k < m - 1; ++k) {
-                    mins[k] = minPathFromDaDb(D, n, i, j, 1 + k, m - 1 - k);
+                int* sums = new int[n];
+                cilk_for (int k = 0; k < n; ++k) {
+                    sums[k] = D[m - 1][i][k + 1] + D[1][k + 1][j];
                 }
-                int mv = reduce(mins, m - 1, min, INT_MAX);
+                int mv = reduce(sums, n, min, INT_MAX);
                 D[m][i][j] = std::min(mv, D[m - 1][i][j]);
-                delete[] mins;
+                delete[] sums;
             }
         }
     }
