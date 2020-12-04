@@ -32,7 +32,25 @@ T reduce(T* array, int n, T (*op)(T, T), T id) {
 }
 
 void APSP (int ***D, int n) {
-	for (int m = 2; m <= n; ++m) {
+    int lastM;
+    // Powers of 2
+	for (int m = 2; m <= n; m *= 2) {
+        cilk_for (int i = 1; i <= n; ++i) {
+            cilk_for (int j = 1; j <= n; ++j) {
+                int* sums = new int[n];
+                cilk_for (int k = 0; k < n; ++k) {
+                    sums[k] = D[m / 2][i][k + 1] + D[m / 2][k + 1][j];
+                }
+                int mv = reduce(sums, n, min, INT_MAX);
+                D[m][i][j] = std::min(mv, D[m / 2][i][j]);
+                delete[] sums;
+            }
+        }
+        lastM = m;
+    }
+
+    // Odd ones out
+	for (int m = lastM + 1; m <= n; ++m) {
         cilk_for (int i = 1; i <= n; ++i) {
             cilk_for (int j = 1; j <= n; ++j) {
                 int* sums = new int[n];
